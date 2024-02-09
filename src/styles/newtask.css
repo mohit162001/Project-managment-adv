@@ -1,0 +1,13 @@
+#newtask-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem; 
+}
+#newtask-input {
+    outline: none;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0.25rem;
+    border-radius: 0.125rem;
+    background-color: #b4b4b4;
+}

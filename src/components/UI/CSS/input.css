@@ -1,0 +1,37 @@
+/* Equivalent CSS for Tailwind CSS classes */
+.input-p {
+    display: flex; /* flex */
+    flex-direction: column; /* flex-col */
+    gap: 0.25rem; /* gap-1 */
+    margin-top: 1rem; /* my-4 */
+    margin-bottom: 1rem; /* my-4 */
+  }
+
+.input-lable{
+
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 600; /* font-bold */
+    text-transform: uppercase; /* uppercase */
+    color: #b3aea1; /* text-stone-500 */
+}
+
+.input-inputfield{
+    width: 100%; 
+    text-align: left;
+    padding-left: 0.5rem; 
+    padding-right: 0.5rem; 
+    padding-top: 0.25rem; 
+    padding-bottom: 0.25rem; 
+    border-radius: 0.125rem; 
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem; 
+    cursor: pointer;
+    outline: none;
+    transition: color 0.3s, background-color 0.3s;
+  }
+  
+  .input-inputfield:hover {
+  
+    background-color: #d6d6d6;
+  }
+  

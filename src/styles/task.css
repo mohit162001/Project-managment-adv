@@ -1,0 +1,31 @@
+#task-h2{
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #9c9c9c;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+#task-p{
+        margin-bottom: 1rem;
+        color: #a3a3a3;    
+}
+#task-span{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem; /* Adjust as needed */
+}
+#task-ul{
+    padding: 1rem;
+    margin-top: 2rem;
+    border-radius: 0.375rem;
+    background-color: #f2f2f2;
+}
+
+#task-btn{
+    color: #a0aec0;
+}
+
+#task-btn{
+    color: #f56565;
+}

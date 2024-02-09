@@ -1,0 +1,16 @@
+@import './styles/tailwind.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities; 
+body{
+    background: rgba(216, 216, 216, 0.705);
+}
+
+main {
+    height: 100vh; 
+    margin-top: 2rem; 
+    margin-bottom: 2rem; 
+    display: flex; 
+    gap: 2rem; 
+  }

@@ -1,0 +1,31 @@
+#modal-back{
+  backdrop-filter: blur(10px); 
+  background-color: rgba(42, 42, 42, 0.9);
+  }
+.modal-container{
+
+    backdrop-filter: blur(10px); 
+    background-color: rgba(42, 42, 42, 0.9); 
+    padding: 1rem; 
+    border-radius: 0.375rem; 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+}
+
+#modal-h2 {
+    font-size: 1.25rem; 
+    font-weight: bold; 
+    color: #c7c4bc;
+    margin-top: 1rem; 
+    margin-bottom: 1rem; 
+}
+#modal-p1 {
+    color: #787878; 
+    margin-bottom: 1rem;
+  }
+#modal-p2{
+    margin-top: 2rem;
+}
+
+form{
+    text-align: right;
+}

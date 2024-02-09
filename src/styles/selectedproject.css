@@ -1,0 +1,41 @@
+.selectedproject-container {
+    width: 35rem;
+    margin-top: 4rem;
+}
+
+.selectedproject-header {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #718096;
+}
+
+.selected-project-indiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.selectedproject-h1 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #7d7d7d;
+    margin-bottom: 0.5rem;
+}
+
+.selectedproject-btn {
+    color: #7d7d7d;
+}
+
+.selectedproject-btn:hover {
+    color: #5e5e5e;
+}
+
+.selectedproject-p1 {
+    margin-bottom: 1rem;
+    color: #a3a3a3;
+}
+
+.selectedproject-p2 {
+    white-space: pre-wrap;
+    color: #7d7d7d;
+}

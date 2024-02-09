@@ -1,0 +1,9 @@
+App(all project state and UI state)
+   |
+   |__SideBar	(alawys on)
+   |
+   |__NewProject     (no project selected)
+   |
+   |__NoProject	     (default main screen)
+   |
+   |__SelectedProject	(if project selected from side bar)
