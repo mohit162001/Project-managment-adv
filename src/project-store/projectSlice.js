@@ -3,26 +3,28 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialProjectState = {
   selectedProject: undefined,
   projects: [],
-  task: [],
+  tasks: [],
 };
 
-const projectSlice = createSlice({
+export const projectSlice = createSlice({
   name: "project-slice",
   initialState: initialProjectState,
   reducers: {
     addProject(state, action) {
+      console.log('add')
       const projectId = Math.random();
       const newProject = {
         ...action.payload,
         id: projectId,
+        tasks:[]
       };
-      return {
+      return{
         ...state,
         selectedProject: undefined,
         projects: [...state.projects, newProject],
       };
     },
-  },
+  
 
   cancleAddProject(state) {
     return {
@@ -32,7 +34,7 @@ const projectSlice = createSlice({
   },
 
   deleteProject(state, action) {
-    return {
+    return{
       ...state,
       selectedProject: undefined,
       projects: state.projects.filter((project) => {
@@ -42,13 +44,13 @@ const projectSlice = createSlice({
   },
 
   projectDisplay(state, action) {
-    return {
+    return{
       ...state,
       selectedProject: action.payload,
     };
   },
 
-  currSelectedProject(state) {
+  currSelectedProject(state,action) {
     return {
       ...state,
       selectedProject: null,
@@ -65,20 +67,20 @@ const projectSlice = createSlice({
       };
       return {
         ...state,
-        task: [...state.task, newTask],
+        tasks: [...state.tasks, newTask],
       };
     }
   },
 
   deleteTask(state,action){
-    return ({
+    return({
         ...state,
-          task:state.task.filter((task)=>{
+          tasks:state.tasks.filter((task)=>{
           return task.id !== action.payload;
         }),
       })
   }
+}
 });
 
 export const projectActions = projectSlice.actions;
-export default projectSlice;

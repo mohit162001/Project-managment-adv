@@ -1,16 +1,18 @@
 import React, { useState } from 'react'
 import '../styles/newtask.css'
 import Button from './UI/Button.jsx'
+import { useDispatch } from 'react-redux';
+import { projectActions } from '../project-store/projectSlice.js';
 
-function NewTask({handleTask, handleDeleteTask}) {
+function NewTask() {
 
     const [taskInput,setTaskInput] = useState('');
-
+    const dispatch = useDispatch();
     function handleInput(event){
         setTaskInput(event.target.value);
     }
     function handleInputField(){
-        handleTask(taskInput);
+        dispatch(projectActions.addTask(taskInput));
         setTaskInput('');
     }
   return (

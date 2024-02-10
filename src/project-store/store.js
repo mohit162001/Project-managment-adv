@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import projectSlice from "./projectSlice";
+import {projectSlice} from "./projectSlice";
 
 
 const store = configureStore({
-    reducer: projectSlice.reducer
+    reducer: {
+        project:projectSlice.reducer
+    }
 })
 
 export default store;

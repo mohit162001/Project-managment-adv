@@ -2,13 +2,19 @@ import React, { useRef } from 'react'
 import Input from '../components/UI/Input.jsx';
 import '../styles/newproject.css'
 import Modal from './UI/Modal.jsx';
-function NewProject({handleAddProject, handleCancle}) {
+import { useDispatch } from 'react-redux';
+import { projectActions } from '../project-store/projectSlice.js';
+function NewProject({handleAddProject}) {
 
+  const dispatch = useDispatch()
   const modal = useRef();
   const title = useRef();
   const description = useRef();
   const dueDate = useRef();
 
+  function handleCancle(){
+    dispatch(projectActions.cancleAddProject())
+  }
   
   function onSave(){
     const enteredTitle = title.current.value;
@@ -25,7 +31,7 @@ function NewProject({handleAddProject, handleCancle}) {
       description:enteredDescription,
       duedate:enteredDueDate
     }
-    handleAddProject(project)
+    dispatch(projectActions.addProject(project))
   }
   
 

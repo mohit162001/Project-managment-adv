@@ -1,9 +1,14 @@
 App(all project state and UI state)
    |
-   |__SideBar	(alawys on)
+   |__SideBar	(alawys on)   done
    |
-   |__NewProject     (no project selected)
+   |__NewProject(no project selected)
    |
    |__NoProject	     (default main screen)
    |
-   |__SelectedProject	(if project selected from side bar)
+   |__SelectedProjec(if project selected from side bar)
+   		    |
+   		    |__Task
+   		    	  |
+   		    	  |__NewTask
+   
