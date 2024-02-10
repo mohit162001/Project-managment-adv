@@ -6,13 +6,14 @@ import { useDispatch } from 'react-redux'
 import { projectActions } from '../project-store/projectSlice.js'
 function SelectedProject({project}) {
 
+  const projectId = project.id
   const dispatch = useDispatch()
   
   function handleDeleteProject(id){
     dispatch(projectActions.deleteProject(id))
   }
 
-  
+  console.log(project)
   const formattedDate = new Date(project.duedate).toLocaleString('default',{
     day:'2-digit',
     month:'short',
@@ -29,7 +30,7 @@ function SelectedProject({project}) {
         <p className='selectedproject-p1'>{formattedDate}</p>
         <p className='selectedproject-p2'>{project.description}</p>
         </header>
-        <Task />
+        <Task projectId={projectId} />
     </div>
   )
 

@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialProjectState = {
   selectedProject: undefined,
   projects: [],
-  tasks: [],
+
 };
 
 export const projectSlice = createSlice({
@@ -16,7 +16,7 @@ export const projectSlice = createSlice({
       const newProject = {
         ...action.payload,
         id: projectId,
-        tasks:[]
+        tasks:[] 
       };
       return{
         ...state,
@@ -57,28 +57,64 @@ export const projectSlice = createSlice({
     };
   },
 
+  // addTask(state, action) {
+  //   if (action.payload !== "") {
+  //     const taskId = Math.random();
+  //     const newTask = {
+  //       taskText: action.payload ,
+  //       projectId: state.selectedProject,
+  //       id: taskId,
+  //     };
+  //     return {
+  //       ...state,
+  //       tasks: [...state.tasks, newTask],
+  //     };
+  //   }
+  // },
   addTask(state, action) {
     if (action.payload !== "") {
       const taskId = Math.random();
       const newTask = {
         taskText: action.payload ,
-        projectId: state.selectedProject,
         id: taskId,
       };
+      
+      const updatedProjects = state.projects.map(project => {
+        if (project.id === state.selectedProject) {
+          return {
+            ...project,
+            tasks: [...project.tasks, newTask]
+          };
+        }
+        return project;
+      });
       return {
         ...state,
-        tasks: [...state.tasks, newTask],
+        projects: updatedProjects,
       };
     }
   },
 
+
   deleteTask(state,action){
-    return({
-        ...state,
-          tasks:state.tasks.filter((task)=>{
-          return task.id !== action.payload;
-        }),
+
+    const updatedProjects = state.projects.map(project => {
+      const updatedTasks = project.tasks.filter((task)=>{
+        return task.id !== action.payload
       })
+      if (project.id === state.selectedProject) {
+        return {
+          ...project,
+          tasks: updatedTasks
+        };
+      }
+      return project;
+    });
+
+    return {
+        ...state,
+        projects: updatedProjects,
+      };
   }
 }
 });
