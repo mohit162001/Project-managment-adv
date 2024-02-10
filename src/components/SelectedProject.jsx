@@ -13,7 +13,6 @@ function SelectedProject({project}) {
     dispatch(projectActions.deleteProject(id))
   }
 
-  console.log(project)
   const formattedDate = new Date(project.duedate).toLocaleString('default',{
     day:'2-digit',
     month:'short',

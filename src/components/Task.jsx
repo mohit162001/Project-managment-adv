@@ -13,7 +13,7 @@ function Task({ projectId }) {
   function handleDeleteTask(taskid) {
     disptach(projectActions.deleteTask(taskid));
   }
-  console.log(selectedProject[0].tasks)
+
   return (
     <section>
       <h2 id="task-h2">Tasks</h2>
@@ -26,7 +26,7 @@ function Task({ projectId }) {
       {(selectedProject[0].tasks && selectedProject[0].tasks.length > 0) ? (
         <ul id="task-ul">
           {selectedProject[0].tasks.map((task) => {
-            console.log(task.taskText)
+
             return (
               <span key={task.id} id="task-span">
                 <li id="task-li">{task.taskText}</li>

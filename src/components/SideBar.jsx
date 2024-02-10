@@ -34,7 +34,7 @@ function SideBar() {
   if(isYear && filterProjects.length===0){
     projectsArr = null
   }
-  if(isYear==='select'){
+  if(isYear==='filter'){
     setYear()
   }
   

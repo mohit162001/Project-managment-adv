@@ -11,7 +11,7 @@ export const projectSlice = createSlice({
   initialState: initialProjectState,
   reducers: {
     addProject(state, action) {
-      console.log('add')
+
       const projectId = Math.random();
       const newProject = {
         ...action.payload,
